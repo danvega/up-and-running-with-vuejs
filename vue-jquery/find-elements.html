@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Find Elements</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+  <div id="app">
+    <p @click="onClick">Hello, jQuery</p>
+    <p @click="onClick">Hello, Friends</p>
+    <p @click="onClick">Hello, my name is Dan</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        onClick(e) {
+          console.log(e.currentTarget.innerText);
+        }
+      }
+    })
+  </script>
+</body>
+</html>

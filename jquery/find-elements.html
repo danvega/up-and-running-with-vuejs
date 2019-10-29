@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Finding Elements</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <p>Hello, jQuery</p>
+    <p>Hello, Friends</p>
+    <p>Hello, my name is Dan</p>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#app p').click(function (event) {
+        console.log($(this).html());
+      });
+    });
+  </script>
+</body>
+</html>
