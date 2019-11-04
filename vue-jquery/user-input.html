@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue Mounted</title>
+  <title>Vue User Input</title>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
 
   <div id="app">
-
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" v-model="name" />
+    <p v-show="name != ''"> Hello, {{ name }}</p>
   </div>
 
   <script>
     new Vue({
       el: '#app',
-      mounted() {
-        console.log('component is mounted')
+      data: {
+        name: ''
       }
     })
   </script>
