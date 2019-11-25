@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello, Vue</title>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <h1>Data Binding: Expressions</h1>
+    <p>msg: {{ msg }}</p>
+    <p>count + 1: {{ count + 1 }}</p>
+    <p>2 * 100: {{ 2 * 100 }}</p>
+    <p>greeting: {{ greeting + ', Vue!' }}</p>
+    <p>reverse: {{ msg.split('').reverse().join('') }} </p>
+    <p>in stock: {{ product.inStock ? 'YES' : 'NO' }}</p>
+    <p>new message: {{ getNewMessage() }}</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        msg: 'Hello, Vue!',
+        count: 10,
+        greeting: 'Hello',
+        product: {
+          inStock: true
+        }
+      },
+      methods: {
+        getNewMessage() {
+          return "This is my new message";
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
