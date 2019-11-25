@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Twitter Friends</title>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <ul>
+      <li v-for="friend in friends" v-bind:key="friend.name">
+        {{ friend.name }} | {{ friend.username }}
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          friends: [
+            {name: 'Evan You', username: 'youyuxi'},
+            {name: 'Guillaume Chau', username: 'Akryum'},
+            {name: 'Sarah Drasner', username: 'sarah_edo'},
+            {name: 'Greg Pollack', username: 'greggpollack'},
+            {name: 'Adam Jahr', username: 'AdamJahr'},
+            {name: 'Chris Fritz', username: 'chrisvfritz'},
+            {name: 'Jen Looper', username: 'jenlooper' },
+            {name: 'Damian Dulisz', username: 'DamianDulisz' },
+            {name: 'Ben Hong', username: 'bencodezen'},
+            {name: 'Divya Sasidharan', username: 'shortdiv'}
+          ]
+        }
+      }
+    });
+  </script>
+</body>
+</html>
