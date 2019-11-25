@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timer</title>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <p>{{ now }}</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello from Vue!',
+        now: new Date()
+      },
+      methods: {
+        updateDateTime() {
+          this.now = new Date();
+        }
+      },
+      mounted() {
+        setInterval(() => {
+          this.updateDateTime();
+        }, 100);
+      }
+    });
+  </script>
+
+</body>
+</html>
