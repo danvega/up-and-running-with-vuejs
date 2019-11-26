@@ -1,5 +1,9 @@
-Vue.component("dans-clock", {
-  props: ["format"],
+<template>
+  <div class="clock">{{ now }}</div>
+</template>
+
+<script>
+export default {
   name: "dans-clock",
   data() {
     return {
@@ -17,6 +21,13 @@ Vue.component("dans-clock", {
     setInterval(() => {
       this.updateDateTime();
     }, 100);
-  },
-  template: `<div class="clock">{{ now }}</div>`
-});
+  }
+};
+</script>
+
+<style>
+.clock {
+  background-color: black;
+  color: white;
+}
+</style>
