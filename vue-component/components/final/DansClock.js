@@ -1,6 +1,5 @@
 Vue.component("dans-clock", {
   props: ["format"],
-  name: "dans-clock",
   data() {
     return {
       now: new Date()
