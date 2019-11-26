@@ -20,7 +20,7 @@ export default {
   mounted() {
     setInterval(() => {
       this.updateDateTime();
-    }, 100);
+    }, 1000);
   }
 };
 </script>

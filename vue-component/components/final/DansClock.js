@@ -16,7 +16,7 @@ Vue.component("dans-clock", {
   mounted() {
     setInterval(() => {
       this.updateDateTime();
-    }, 100);
+    }, 1000);
   },
   template: `<div class="clock">{{ now }}</div>`
 });
