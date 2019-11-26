@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Timer</title>
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 
@@ -19,9 +19,11 @@
   <script>
     new Vue({
       el: '#app',
-      data: {
-        message: 'Hello from Vue!',
-        now: new Date()
+      data() {
+        return {
+          message: 'Hello from Vue!',
+          now: new Date()
+        }
       },
       methods: {
         updateDateTime() {
