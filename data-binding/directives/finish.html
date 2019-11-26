@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Binding: Directives</title>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <a :href="link.href" :alt="link.alt" :class="link.class">{{ link.text }}</a>
+    <p v-if="showBanner">THIS IS A SPECIAL SALES BANNER</p>
+    <p>Secret Number: <span v-show="secretNumber != 0">{{ secretNumber }}</span></p>
+    <article v-html="post"></article>
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        link: {
+          text: 'Vue.js',
+          href: 'https://vuejs.org',
+          alt: 'Vue.js Website',
+          class: 'links'
+        },
+        showBanner: false,
+        secretNumber: 0,
+        post: 'This is my <strong>awesome</strong> blog post'
+      }
+    });
+  </script>
+
+</body>
+</html>
