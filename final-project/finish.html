@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Up and Running with VueJS Final Project</title>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+  li {
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <h2>All Friends</h2>
+    <ul>
+      <li v-for="(friend,index) in friends" v-bind:key="friend.username" @click="selectFriend(friend,index)">
+        {{ friend.name }} | {{ friend.username }}
+      </li>
+    </ul>
+
+    <h2>Selected Friends</h2>
+    <ul v-show="selectedFriends.length > 0">
+      <li v-for="friend in selectedFriends" v-bind:key="friend.username">
+        {{ friend.name }} | {{ friend.username }}
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          friends: [
+            {name: 'Evan You', username: 'youyuxi'},
+            {name: 'Guillaume Chau', username: 'Akryum'},
+            {name: 'Sarah Drasner', username: 'sarah_edo'},
+            {name: 'Greg Pollack', username: 'greggpollack'},
+            {name: 'Adam Jahr', username: 'AdamJahr'},
+            {name: 'Chris Fritz', username: 'chrisvfritz'},
+            {name: 'Jen Looper', username: 'jenlooper' },
+            {name: 'Damian Dulisz', username: 'DamianDulisz' },
+            {name: 'Ben Hong', username: 'bencodezen'},
+            {name: 'Divya Sasidharan', username: 'shortdiv'}
+          ],
+          selectedFriends: []
+        }
+      },
+    methods: {
+      selectFriend(friend,index) {
+        // remove from friends
+        this.friends.splice(index,1);
+        // add to selectedFriends
+        this.selectedFriends.push(friend);
+      }
+    }
+    });
+  </script>
+</body>
+</html>
