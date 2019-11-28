@@ -42,4 +42,10 @@ First take the friends array and use that to display all of the records in an un
 </div>
 ```
 
-Next display the data in the selected friends array below the heading 
+Next display the data in the selected friends array below the heading **Selected Friends**. There are currently no friends in that array so let's make sure we only show that unordered list if the length of that array is greater than 0.
+
+Now that you have both of your lists being display you can add some interactivity to the application. When a user clicks on a friend in the first list I want you to remove it from friends list and add it to the selected friends list.
+
+![Friends Application](friends-app.png)
+
+HINT: You can add an event listener to the list item
