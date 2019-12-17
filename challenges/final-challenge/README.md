@@ -1,6 +1,6 @@
 # Up & Running with VueJS Final Challenge
 
-In this final challenge you are going to take what you have learned in this course and build a small application. In a previous lesson we built a friends application that looped over a list of friends using the `v-for` directive. We are going to do something similar here but add some functionality to it.
+In this final challenge, you are going to take what you have learned in this course and build a small application. In a previous lesson, we built a friends application that looped over a list of friends using the `v-for` directive. We are going to do something similar here but add some functionality to it.
 
 ## Challenge Instructions
 
@@ -31,7 +31,7 @@ If you open up `start.html` you will see the following data defined.
 </script>
 ```
 
-First take the friends array and use that to display all of the records in an unordered list `<ul>`. Please add the list of friends below the heading **All Friends**. Include both the friend name and username in the list item `<li>`.
+First, take the friends array and use that to display all of the records in an unordered list `<ul>`. Please add the list of friends below the heading **All Friends**. Include both the friend name and username in the list item `<li>`.
 
 ```html
 <div id="app">
